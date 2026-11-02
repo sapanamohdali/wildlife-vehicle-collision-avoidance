@@ -1,70 +1,72 @@
-
 # Wildlife–Vehicle Collision Detection and Avoidance System
 
-## 📌 Project Overview
+An AI-powered wildlife detection and vehicle collision avoidance prototype designed to help reduce animal–vehicle collisions using computer vision and real-time alert communication.
 
-An AI-powered wildlife detection and vehicle collision avoidance system designed to reduce animal–vehicle collisions in wildlife corridors.
+## Project Overview
 
-The system uses computer vision and deep learning to identify animals from video streams and generate alerts when wildlife is detected. It aims to improve road safety and support wildlife conservation.
+Wildlife crossing roads can create dangerous situations for both animals and road users. This project explores a camera-based system that detects animals near roads and communicates potential threats through an alert mechanism.
 
-## 🎯 Objectives
+The system uses YOLO-based object detection, OpenCV for video processing, and MQTT for communication.
 
-- Detect wildlife using computer vision.
-- Identify animals from video input using YOLO.
-- Process video frames using OpenCV.
-- Generate wildlife detection alerts.
-- Communicate alerts through MQTT.
-- Provide a backend service using FastAPI.
-- Display detection information through a monitoring dashboard.
+## Key Features
 
-## ⚙️ Technologies Used
+- **Animal Detection:** Detects animals in video using a custom-trained YOLO model.
+- **Human Detection:** Uses a YOLO model to identify humans.
+- **Video Processing:** Processes video frames using OpenCV.
+- **Clearance Monitoring:** Includes a 10-second clearance timer after detections disappear.
+- **MQTT Communication:** Publishes wildlife status messages to an MQTT broker.
+- **Testing Modules:** Includes scripts for testing detection, clearance, and MQTT functionality.
 
-- Python
-- YOLO
-- OpenCV
-- PyTorch
-- FastAPI
-- MQTT
-- Streamlit
-- Computer Vision
-- Deep Learning
+## Technologies Used
 
-## 🏗️ System Workflow
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| OpenCV | Video and image processing |
+| YOLO / Ultralytics | Object detection |
+| PyTorch | Deep learning framework |
+| Paho MQTT | Message communication |
+| Mosquitto | MQTT broker |
 
-1. Capture video input.
-2. Process video frames using OpenCV.
-3. Detect animals using the trained YOLO model.
-4. Evaluate detection events.
-5. Generate and communicate alerts using MQTT.
-6. Process alerts through the FastAPI backend.
-7. Display information on the monitoring dashboard.
+## Project Structure
 
-## ✨ Key Features
+```text
+wildlife-vehicle-collision-avoidance/
+│
+├── Wildlife-GitHub-Upload/
+│   ├── final_detection.py
+│   ├── train_animal_model.py
+│   ├── prepare_animal_dataset.py
+│   ├── safe_distance_preview.py
+│   ├── test_animal_detection.py
+│   ├── test_human_detection.py
+│   ├── test_clearance.py
+│   ├── test_mqtt.py
+│   └── make_clear_test_video.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-- AI-based wildlife detection.
-- Real-time video processing.
-- Automated wildlife alert generation.
-- MQTT-based communication.
-- Backend alert processing.
-- Monitoring dashboard.
+## Project Status
 
-## 👩‍💻 Project Type
+Academic prototype under development. The repository currently contains the Python source files and initial dependency list. Further integration, testing, and deployment work may be added.
 
-Academic Team Project
+## Future Improvements
 
-## 📌 Project Status
+- Integrate roadside camera feeds.
+- Improve detection under different lighting and weather conditions.
+- Implement distance and collision-risk estimation.
+- Develop a monitoring dashboard.
+- Test the system in realistic wildlife-road scenarios.
 
-Development and testing.
+## Author
 
-## 🚀 Future Improvements
-
-- Improved animal classification.
-- Integration with roadside cameras.
-- Enhanced collision risk assessment.
-- Real-world deployment and testing.
-
-## 👩‍💻 Author
-
-Sapana
+**Sapana**
 
 Computer Science and Engineering Student
+
+## Project Domain
+
+Artificial Intelligence | Computer Vision | Deep Learning | IoT | Road Safety | Wildlife Conservation
